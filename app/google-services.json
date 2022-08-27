@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "127268593718",
+    "firebase_url": "https://to-let-72dbb-default-rtdb.firebaseio.com",
+    "project_id": "to-let-72dbb",
+    "storage_bucket": "to-let-72dbb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:127268593718:android:3ede341f158292b8a37897",
+        "android_client_info": {
+          "package_name": "com.kamal.tolet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "127268593718-hn3t4rhofu6rd98kabm3hu16g3v07vnu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.kamal.tolet",
+            "certificate_hash": "927c87bebb8dfdde31893d5815f5c30e149b00eb"
+          }
+        },
+        {
+          "client_id": "127268593718-98cjmmdn0rdsql11lf8t7b8kt0jdv4a7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBaYMgLTUQLkKZ0sZCwu-JlU075rPI-2x0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "127268593718-98cjmmdn0rdsql11lf8t7b8kt0jdv4a7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
