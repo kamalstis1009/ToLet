@@ -45,6 +45,7 @@
                 <EditText
                     android:id="@+id/user_phone_number"
                     android:hint="Mobile Number"
+                    android:text="01914141707"
                     android:inputType="phone"
                     android:maxLength="11"
                     android:layout_width="match_parent"

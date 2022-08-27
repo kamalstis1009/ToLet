@@ -211,7 +211,7 @@ public class ProfileActivity extends AppCompatActivity {
                         Utility.alertDialog(ProfileActivity.this, "Please change your marital status");
                     } else {
                         if (Network.haveNetwork(ProfileActivity.this)) {
-                            mProgress = Utility.showProgressDialog(ProfileActivity.this, getResources().getString(R.string.progress), false);
+                            mProgress = Utility.showProgressDialog(ProfileActivity.this, getResources().getString(R.string.progress), true);
                             storeToDatabase(mAuthId, name, relation, occupation, email, mPhone, birth, address, isUserOwner, mImageUrl, mToken);
                         } else {
                             Utility.alertDialog(ProfileActivity.this, getString(R.string.network_unavailable));
@@ -236,7 +236,7 @@ public class ProfileActivity extends AppCompatActivity {
 
     //===============================================| Fetch/Get from Firebase Database
     private void getUserData(String mAuthId) {
-        mProgress = Utility.showProgressDialog(ProfileActivity.this, getResources().getString( R.string.progress), false);
+        mProgress = Utility.showProgressDialog(ProfileActivity.this, getResources().getString( R.string.progress), true);
 
         mUserViewModel.getUser(mAuthId).observe(this, new Observer<User>() {
             @Override

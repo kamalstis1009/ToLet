@@ -83,10 +83,12 @@ public class PhoneVerifyActivity extends AppCompatActivity {
         super.onStart();
         FirebaseUser currentUser = mAuth.getCurrentUser();
         if (currentUser != null) {
-            Log.d(TAG, "UID: "+ currentUser.getUid().toString());
-        }
-        if (phoneNumber != null) {
-            Log.d(TAG, "Phone: "+ phoneNumber);
+            //Log.d(TAG, "UID: "+ currentUser.getUid());
+            SharedPrefManager.getInstance(PhoneVerifyActivity.this).saveUserAuthId(currentUser.getUid());
+            Intent intent = new Intent(PhoneVerifyActivity.this, ProfileActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(intent);
+        } else {
             mProgress = Utility.showProgressDialog(PhoneVerifyActivity.this, getResources().getString( R.string.progress), true);
             startPhoneNumberVerification(phoneNumber); //Set verified code to firebase phone authentication
         }
@@ -177,6 +179,7 @@ public class PhoneVerifyActivity extends AppCompatActivity {
 
     //====================================================| Verification Code
     private void startPhoneNumberVerification(String phoneNumber) {
+        //Log.d(TAG, "Auth: " + mAuth.toString());
         PhoneAuthOptions options =
                 PhoneAuthOptions.newBuilder(mAuth)
                         .setPhoneNumber(phoneNumber)       // Phone number to verify
